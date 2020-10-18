@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<div class="path-image">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>DaoSoft</title>
+    <meta name="description" content="DaoSoft">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="./fonts/DS_Fonts.css">
+    <link rel="stylesheet" href="DS_Main.css">
+
+  </head>
+
+  <body>
+    <div class="navbar sticky">
+      <nav class="inner-nav">
+        <div class="home"><a href="DS_Main.html#home">Home</a></div>
+        <div class="ourpath"><a href="DS_Main.html#ourpath">Our Path</a></div>
+        <div class="aboutus"><a href="DS_Main.html#aboutus">About Us</a></div>
+        <div class="feed"><a href="DS_Feed.html">Feed</a></div>
+        <div class="contact"><a  class="active" href="DS_Contact.html">Contact</a></div>
+      </nav>
+    </div>
+    <section class="content page" id="page1">
+      <div class="inner-content">
+          <div class="contact-text">
+            <h2>DaoSoft e.U.</h2>
+            <br><a href="mailto:office@daosoft.at">office@daosoft.at</a>
+            <br>
+            <br>Adresse:
+            <br>Mitterling 22 
+            <br>8490 Bad Radkersburg Austria
+            <br>
+            <br>Firmenbuch:
+            <br>FN 379442d
+            <br>
+            <br>UID:
+            <br>ATU67182201
+          </div>
+      </section>
+  </div>
+<script>
+  //window.instgrm.Embeds.process();
+  window.addEventListener('DOMContentLoaded', () => {
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        if (entry.intersectionRatio !== 0) {
+          document.querySelector(`nav div a[href="#${id}"]`).parentElement.classList.add('active');
+        } else {
+          document.querySelector(`nav div a[href="#${id}"]`).parentElement.classList.remove('active');
+        }
+      });
+    });
+
+    // Track all sections that have an `id` applied
+    document.querySelectorAll('section[id]').forEach((section) => {
+      observer.observe(section);
+    });
+
+  });
+</script>
+</body>
+</div>
+
+</html>
