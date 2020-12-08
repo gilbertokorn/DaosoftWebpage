@@ -164,3 +164,13 @@ a:active {
   width: 50vw;
   height: auto;
 }
+
+.insta-outer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.insta-inner-container {
+  width: 80vw;
+  margin-top: 5vw;
+}
