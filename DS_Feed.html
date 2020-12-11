@@ -9,6 +9,7 @@
     <title>DaoSoft</title>
     <meta name="description" content="DaoSoft">
     <meta name="author" content="SitePoint">
+    <script src="jquery-3.5.1.min.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 
     <link rel="stylesheet" href="./fonts/DS_Fonts.css">
@@ -26,34 +27,14 @@
         <div class="contact"><a href="DS_Contact.html">Contact</a></div>
       </nav>
     </div>
+
     <div class="insta-outer-container">
-    <div class="insta-inner-container">
-    <div class="elfsight-app-2aaf19c4-c627-4f15-b734-c82700727e87"></div>
-  </div>
-  </div>
-<script>
-  //window.instgrm.Embeds.process();
-  window.addEventListener('DOMContentLoaded', () => {
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (entry.intersectionRatio !== 0) {
-          document.querySelector(`nav div a[href="#${id}"]`).parentElement.classList.add('active');
-        } else {
-          document.querySelector(`nav div a[href="#${id}"]`).parentElement.classList.remove('active');
-        }
-      });
-    });
-
-    // Track all sections that have an `id` applied
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-
-  });
-</script>
-</body>
+      <div class="insta-inner-container">
+        <div class="elfsight-app-2aaf19c4-c627-4f15-b734-c82700727e87"></div>
+      </div>
+    </div>
+    <script src="DS_Scripts.js"></script>
+  </body>
 </div>
 
 </html>
